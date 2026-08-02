@@ -1,7 +1,25 @@
 aid: vibely
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vibely.png
 name: Vibely
-description: Vibely is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Vibely was a creator-community platform (surfaced as a 500 Global portfolio company) that let creators
+  host paid communities, challenges, and group chat. As of this enrichment pass the domain vibely.io no
+  longer serves an independent product; every path — including all /.well-known/ discovery endpoints —
+  301-redirects to kajabi.com/features/communities, indicating Vibely was folded into Kajabi's Communities
+  product. No standalone Vibely developer portal, API, OpenAPI, SDK, MCP server, or llms.txt could be
+  found; the only artifact captured is a probed TLS/DNS domain-security profile of the surviving redirect
+  domain. This profile is retained as a defunct/acquired portfolio lead.
 url: https://raw.githubusercontent.com/api-evangelist/vibely/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +27,18 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-status-note: 'vibely.io 301-redirects to kajabi.com/features/communities (probed 2026-07-21); no independent API surface.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Creator Economy
+- Community Platform
+- Membership
+- Acquired
+- Kajabi
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +46,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/vibely-domain-security.yml
 - type: Website
   url: https://vibely.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
